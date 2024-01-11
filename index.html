@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+<script>
+    
+    let tempCelsius;
+
+    do {
+        tempCelsius = parseFloat(prompt('Ingrese la temperatura en °C para conocer su conversión'))
+    } while (isNaN(tempCelsius))
+
+    function conversorFahrenheit(numero){
+        const tempFahrenheit = (numero * 1.8) + 32
+        return tempFahrenheit
+    }
+
+    function conversorKelvin(numero){
+        const tempKelvin = numero + 273.15
+        return tempKelvin
+    }
+
+    const fahrConvertido = conversorFahrenheit(tempCelsius)
+    const kelConvertido = conversorKelvin(tempCelsius)
+
+    document.write(`La temperatura ingresada (${tempCelsius}°C) equivale a ${fahrConvertido}°F y a ${kelConvertido}°K`)
+
+
+</script>
+
+    
+</body>
+</html>
